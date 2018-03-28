@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_static"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.wxj.my_fragement.StaticActivity">
+
+    <fragment
+        android:id="@+id/frag_one"
+        android:name="com.example.wxj.my_fragement.fragment.OneFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <fragment
+        android:id="@+id/frag_two"
+        android:name="com.example.wxj.my_fragement.fragment.TwoFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    /*在元素中的android:name属性指定了在布局中要实例化的Fragment。
+    当系统创建这个Activity布局时，它实例化在布局中指定的每一个Fragment，
+    并且分别调用onCreateView()，来获取每个Fragment的布局。
+    然后系统会在Activity布局中插入通过元素中声明直接返回的视图*/
+</LinearLayout>
