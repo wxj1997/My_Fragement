@@ -32,7 +32,6 @@ public class DynamicActivity extends AppCompatActivity implements View.OnClickLi
 
         tvShowMsg = (TextView) findViewById(R.id.tv_show_msg);
 
-       
 
         btnOne.setOnClickListener(this);
         btnTwo.setOnClickListener(this);

@@ -32,6 +32,9 @@ public class ThreeFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_three, container, false);
         tvShowMsg=(TextView) v.findViewById(R.id.tv_show_msg);
         button=(Button) v.findViewById(R.id.btn);
+        /*接收从DynamicActivity传来的数据*/
+        Bundle bundle=getArguments();
+        tvShowMsg.setText(bundle.getString("key"));
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -42,11 +45,6 @@ public class ThreeFragment extends Fragment {
         return v;
 
     }
-/*接收从DynamicActivity传来的数据*/
-    @Override
-    public void onStart() {
-        super.onStart();
-        Bundle bundle=getArguments();
-        tvShowMsg.setText(bundle.getString("key"));
-    }
+
+
 }
